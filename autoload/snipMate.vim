@@ -211,7 +211,7 @@ fun! snipMate#ReadSnippetsFile(file) abort
 	if !filereadable(a:file) | return [result, new_scopes] | endif
 	let inSnip = 0
 	let line_no = 0
-	let snipversion = get(g:snipMate, 'snippet_version', 0)
+	let snipversion = get(g:snipMate, 'snippet_version', 1)
 	for line in readfile(a:file) + ["\n"]
 		let line_no += 1
 
